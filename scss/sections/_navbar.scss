@@ -1,0 +1,31 @@
+@use'../custom' as *;
+@use'../components/mixins' as *;
+
+.menu {
+    background-color: $gray-dark;
+    opacity: 0.95;
+
+    @media screen and (max-width: 990px) {
+        opacity: 1;
+    }
+
+    .btn-link {
+        @media screen and (max-width: 990px) {
+            display: none;
+        }
+    }
+
+    li {
+        padding: 0 0.7rem;
+
+        a {
+            color: $blue;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        :hover {
+            color: $blue-light;
+        }
+    }
+}

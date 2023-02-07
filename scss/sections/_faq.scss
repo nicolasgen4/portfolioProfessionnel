@@ -1,0 +1,49 @@
+@use '../custom' as *;
+
+.faq {
+    @include media-breakpoint-down(sm) {
+        padding-top: 4rem;
+    }
+
+    background-color: $gray-dark;
+    color: $yellow;
+    padding-top: 10rem;
+
+    .lead::first-letter {
+        text-transform: capitalize;
+    }
+
+    .accordion-item {
+        color: $yellow;
+        background-color: $gray-light;
+        border: none;
+
+        .accordion-button {
+            color: $yellow;
+            background-color: $gray-border;
+            border: none;
+
+        }
+
+        .accordion-button.collapsed::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-circle-minus' width='44' height='44' viewBox='0 0 24 24' stroke-width='1.5' stroke='%2399c7ed' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Ccircle cx='12' cy='12' r='9' /%3E%3Cline x1='9' y1='12' x2='15' y2='12' /%3E%3C/svg%3E");
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-circle-plus' width='80' height='80' viewBox='0 0 24 24' stroke-width='1.5' stroke='%2399c7ed' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Ccircle cx='12' cy='12' r='9' /%3E%3Cline x1='9' y1='12' x2='15' y2='12' /%3E%3Cline x1='12' y1='9' x2='12' y2='15' /%3E%3C/svg%3E");
+        }
+
+        a {
+            color: $blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $blue-light;
+        }
+
+        strong {
+            font-weight: 400;
+        }
+    }
+}

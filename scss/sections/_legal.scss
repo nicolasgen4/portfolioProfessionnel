@@ -1,0 +1,42 @@
+@use'../custom' as *;
+
+.notices {
+    background-color: $gray-light;
+    color: $yellow;
+    padding: 10rem 0 10rem 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: 8rem 0 0rem 0;
+    }
+
+    h1::first-letter {
+        text-transform: capitalize;
+    }
+
+    .notice {
+        @include media-breakpoint-down(sm) {
+            padding: 0 0 2.6rem 0;
+        }
+    }
+
+    &__content {
+        padding: 1rem;
+        margin-top: 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+        }
+
+        .legal-list {
+            list-style-type: none;
+
+            ::first-letter {
+                text-transform: capitalize;
+            }
+        }
+
+        h2::first-letter {
+            text-transform: capitalize;
+        }
+    }
+}

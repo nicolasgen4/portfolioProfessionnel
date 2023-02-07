@@ -1,0 +1,110 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.get-started {
+    background-color: $gray-dark;
+    color: $yellow;
+    padding-bottom: 5rem;
+
+    .info {
+        background-color: $gray-light;
+    }
+}
+
+.cta-info {
+    padding: 3rem;
+    margin: 1rem 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+    }
+
+    &__list {
+        position: relative;
+        list-style-type: none;
+        display: block;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.7rem;
+
+        i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+    } 
+
+    p {
+        margin: 1.6rem 0 1.6rem 0;
+    }
+    
+    ::first-letter {
+        text-transform: capitalize;
+    }
+
+    .message {
+        font-size: 2rem;
+        margin-top: 4.8rem;
+        padding: 1.6rem 0 1.6rem 0;
+        text-align: center;
+        color: $blue;
+        border: .3rem solid $blue;
+        border-radius: 1rem;
+
+        @include media-breakpoint-down(sm) {
+            padding: 2.6rem;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+//FORM CONTENT
+.form {
+    padding: 3rem;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+    }
+
+    form .honeypot {
+        display: none;
+    }
+
+    label {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    label::first-letter {
+        text-transform: capitalize;
+    }
+
+    input {
+        background-color: $gray-500;
+        border: none;
+    }
+
+    textarea {
+        background-color: $gray-500;
+        border: none;
+    }
+
+    button {
+        border: none;
+        text-transform: capitalize;
+        border: 0.1rem solid rgba($blue, 0.6);
+        background-color: $blue;
+        color: $gray-dark;
+        font-weight: 700;
+        font-size: 1.1rem;
+
+        &:hover {
+            @include gradient;
+            color: $blue;
+        }
+    }
+
+    p {
+        padding: 1rem 0 1rem 0;
+        margin: 0;
+    }
+}

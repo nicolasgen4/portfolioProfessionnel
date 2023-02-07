@@ -1,0 +1,160 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.footer {
+    background-color: $footer;
+}
+
+//STYLE THE CONTACT-BOX CONTENT
+.contact-box {
+    position: relative;
+
+    &__icon {
+        width: 2.5rem;
+        stroke: $yellow;
+        padding-top: 0.5rem;
+
+        @include media-breakpoint-up(sm) {
+            width: 4rem;
+        }
+    }
+
+
+    &__info {
+        padding: 0.4rem;
+        font-weight: 600;
+
+
+        &--title {
+            color: $yellow;
+            text-decoration: none;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &--subtitle {
+            color: $gray-600;
+            text-decoration: none;
+            font-size: 0.8rem;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+//STYLE THE SOCIAL MEDIA CONTENT
+.footer-sm {
+    background-color: $footer-two;
+    color: $yellow;
+
+    a {
+        color: $blue;
+
+        span {
+            display: none;
+        }
+
+        i {
+            font-size: 1.6rem;
+            margin-left: 1rem;
+
+        }
+    }
+}
+
+//STYLE THE CAMPANY INFO CONTENT
+.campany {
+    color: $yellow;
+
+    .campany-line {
+        width: 60px; 
+        height: 2px;
+    }
+
+    h5::first-letter {
+        text-transform: capitalize;
+    }
+
+}
+
+.campany-list {
+    display: block;
+    list-style-type: none;
+    position: relative;
+
+    li {
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+
+        a {
+            color: $blue;
+            text-decoration: none;
+
+            &:hover {
+                color: $blue-light;
+            }
+        }
+    } ::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+//STYLE THE COPYRIGHT CONTENT
+.footer-bottom {
+    background-color: $footer-two;
+
+    &__copyright {
+        color: $yellow;
+        font-weight: 400;
+
+        a {
+            color: $blue;
+            text-decoration: none;
+
+            &:hover {
+                color: $blue-light;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+//STYLE THE BACK TO TOP BUTTON
+.button-top {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 9999;
+    background-color: $blue;
+
+    span {
+        display: none;
+    }
+
+
+    i {
+        color: $gray-dark;
+        font-size: 1rem;
+        @include absoluteCenter;
+        
+    }
+
+    &:hover {
+        background-color: $gray-dark;
+
+        i {
+            color: $blue;
+        }
+    }
+}
